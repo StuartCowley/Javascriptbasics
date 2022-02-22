@@ -1,4 +1,5 @@
 const getNthElement = (index, array) => {
+  console.log(index % array.length);
   return array[index % array.length];
 };
 
@@ -54,7 +55,7 @@ function onlyEven(numbers) {
 }
 
 const removeNthElement2 = (index, array) => {
- //DID NOT UNDERSTAND AT ALL!!!
+ //OMG - take a slice of the array up until the index, and combine it with a slice that is one after the index, returning a new array (as .slice does)
  return array.slice(0,index).concat(array.slice(index + 1));
 };
 
