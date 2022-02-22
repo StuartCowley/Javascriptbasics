@@ -2,7 +2,7 @@ const getNthElement = (index, array) => {
   console.log(index % array.length);
   return array[index % array.length];
 };
-
+//copied and pasted, couldn't work out alternative.
 
 const arrayToCSVString = array => {
   return array.join();
@@ -55,9 +55,9 @@ function onlyEven(numbers) {
 }
 
 const removeNthElement2 = (index, array) => {
- //OMG - take a slice of the array up until the index, and combine it with a slice that is one after the index, returning a new array (as .slice does)
  return array.slice(0,index).concat(array.slice(index + 1));
 };
+//OMG - just understood this! take a slice of the array up until the index, and combine it with a slice that is one after the index, returning a new array (as .slice does)
 
 const elementsStartingWithAVowel = strings => {
   return strings.filter(str => /^[aeiou]/i.test(str));
@@ -66,12 +66,11 @@ const elementsStartingWithAVowel = strings => {
 const removeSpaces = string => {
   return string.replace(/\s+/g, '');
 };
+//Have vague understanding ish
+
 
 const sumNumbers = numbers => {
   return numbers.reduce((t, n) => {return t+n});
-  // function myFunc(total, num) {
-  //   return total + num;
-  // }
 };
 
 const sortByLastLetter = strings => {
@@ -82,6 +81,7 @@ const sortByLastLetter = strings => {
   }
   return strings.sort(endComparator);
 };
+//copied & pasted. couldn't work out alternative.
 
 module.exports = {
   getNthElement,
